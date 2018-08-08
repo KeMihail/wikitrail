@@ -24,21 +24,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * This class provides hooks into the system's initialization and update processes.
- */
 @SystemSetup(extension = TrainingCoreConstants.EXTENSIONNAME)
 public class CoreSystemSetup extends AbstractSystemSetup
 {
 	public static final String IMPORT_ACCESS_RIGHTS = "accessRights";
 
-	/**
-	 * This method will be called by system creator during initialization and system update. Be sure that this method can
-	 * be called repeatedly.
-	 *
-	 * @param context
-	 *           the context provides the selected parameters and values
-	 */
 	@SystemSetup(type = Type.ESSENTIAL, process = Process.ALL)
 	public void createEssentialData(final SystemSetupContext context)
 	{
@@ -51,9 +41,6 @@ public class CoreSystemSetup extends AbstractSystemSetup
 		importImpexFile(context, "/trainingcore/import/common/cronjobs.impex");
 	}
 
-	/**
-	 * Generates the Dropdown and Multi-select boxes for the project data import
-	 */
 	@Override
 	@SystemSetupParameterMethod
 	public List<SystemSetupParameter> getInitializationOptions()
@@ -65,12 +52,6 @@ public class CoreSystemSetup extends AbstractSystemSetup
 		return params;
 	}
 
-	/**
-	 * This method will be called during the system initialization.
-	 *
-	 * @param context
-	 *           the context provides the selected parameters and values
-	 */
 	@SystemSetup(type = Type.PROJECT, process = Process.ALL)
 	public void createProjectData(final SystemSetupContext context)
 	{

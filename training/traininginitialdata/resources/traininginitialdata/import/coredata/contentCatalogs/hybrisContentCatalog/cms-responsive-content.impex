@@ -9,16 +9,12 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 #
-# Import the Responsive CMS Site configuration
+# Import the CMS content for the site
 #
-$siteUid=__STORE_UID__
+$contentCatalog=__CONTENT_CATALOG_NAME__
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 
+# Import config properties into impex macros
+UPDATE GenericItem[processor=de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor] ; pk[unique=true]
+$jarResourceCms=$config-jarResourceCmsValue                                                                
 
-# CMS Site - Update the theme to be responsive
-INSERT_UPDATE CMSSite;uid[unique=true];theme(code);
-;$siteUid;alpha;
-
-# Remove black and blue themes for responsive
-REMOVE SiteTheme;code[unique=true]
-;black
-;blue
