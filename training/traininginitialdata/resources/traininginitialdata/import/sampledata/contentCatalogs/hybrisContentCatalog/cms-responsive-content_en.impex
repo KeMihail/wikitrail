@@ -60,8 +60,8 @@ UPDATE FooterComponent ; $contentCV[unique=true] ; uid[unique=true] ; notice[lan
                        ;                         ; FooterComponent  ; © 2018 hybris software - training
                        
 # CMS Paragraph Component (Contact information)
-INSERT_UPDATE CMSParagraphComponent ; $contentCV[unique=true] ; uid[unique=true] ; content[lang=$lang]              
-                                    ;                         ; ContactInfo      ; "Call us: +375 (29) 787 55 12"
+INSERT_UPDATE CMSParagraphComponent ; $contentCV[unique=true] ; uid[unique=true] ; content[lang=$lang]           
+                                    ;                         ; ContactInfo      ; "Call by: +375 (29) 787 55 12"
                                     
 # CMS ProductReferences Components  
 UPDATE ProductReferencesComponent ; $contentCV[unique=true] ; uid[unique=true] ; title[lang=$lang]   
@@ -108,8 +108,8 @@ INSERT_UPDATE Media ; $contentCV[unique=true] ; code[unique=true]               
 UPDATE SimpleBannerComponent ; $contentCV[unique=true] ; uid[unique=true]         ; $picture[lang=$lang]                     
                              ;                         ; NextDayDeliveryBanner120 ; Elec_788x120_HomeDeliveryBanner_EN_01.jpg
                              
-UPDATE CMSParagraphComponent ; $contentCV[unique=true] ; uid[unique=true] ; content[lang=$lang]                              
-                             ;                         ; welcomeMessage   ; "<h1>Welcome to the hybris Merchandise Shop</h1>"
+UPDATE CMSParagraphComponent ; $contentCV[unique=true] ; uid[unique=true] ; content[lang=$lang]                 
+                             ;                         ; welcomeMessage   ; "<h1>Welcome to very good Shop</h1>"
                              
 # CMS PurchasedCategorySuggestion Components
 UPDATE PurchasedCategorySuggestionComponent ; $contentCV[unique=true] ; uid[unique=true]             ; title[lang=$lang]     

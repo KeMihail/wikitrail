@@ -215,8 +215,9 @@ UPDATE ContentPage ; $contentCV[unique=true] ; uid[unique=true]   ; linkComponen
                    ;                         ; storefinderPage    ; StoreFinderLink         
                    ;                         ; login              ; LoginLink               
                    
-###### Merchandise Homepage ######
                    
+###### Hybris Homepage ######
+
 INSERT_UPDATE ProductCarouselComponent ; $contentCV[unique=true] ; uid[unique=true]                       ; name                             ; products(code,$productCV)                                                                      ; scroll(code) ; &componentRef                         
                                        ;                         ; HybrisHomepageProductCarouselComponent ; Hybris Homepage Product Carousel ; 0007,0001,0002,0003,0004,0005,0006,0100,0101,0102,0110,0111,0112,0200,0201,0202,0210,0211,0212 ; allVisible   ; HybrisHomepageProductCarouselComponent
                                        
@@ -239,8 +240,8 @@ INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]   
                                  ;                         ; Section5-Homepage  ; Section5              ;                                                       ; Section5Slot-Homepage                   
                                  
                                  
-###### Merchandise Search Results Page ######
                                  
+###### Hybris Search Results Page ######
                                  
 INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]    ; name                     ; active ; cmsComponents(&componentRef)
                           ;                         ; Section2Slot-search ; Section2 Slot for search ; true   ;                             
@@ -263,7 +264,8 @@ INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]   
                                  ;                         ; Side-searchEmpty   ; SideContent           ;                                                          ; SideContent-searchEmpty                 
                                  ;                         ; Middle-searchEmpty ; MiddleContent         ;                                                          ; MiddleContent-searchEmpty               
                                  
-###### Merchandise Cart Page ######
+                                 
+###### Hybris Cart Page ######   
                                  
 INSERT_UPDATE SimpleBannerComponent ; $contentCV[unique=true] ; uid[unique=true]                    ; name                                    ; &componentRef                       ; urlLink
                                     ;                         ; LightboxHomeDeliveryBannerComponent ; Lightbox Home Delivery Banner Component ; LightboxHomeDeliveryBannerComponent ;        
@@ -288,7 +290,7 @@ INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]   
                                  ;                         ; CenterRightContentSlot-cartPage ; CenterRightContentSlot ;                                                       ; CenterRightContentSlot-cartPage         
                                  ;                         ; BottomContentSlot-cartPage      ; BottomContentSlot      ;                                                       ; BottomContentSlot-cartPage              
                                  
-###### Merchandise Checkout Login Page ######
+###### Hybris Checkout Login Page ######
                                  
 INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]            ; name                                ; active ; cmsComponents(&componentRef)
                           ;                         ; BottomContent-checkoutLogin ; Bottom Slot for Checkout Login Page ; true   ; HelpParagraphComponent      
@@ -303,16 +305,9 @@ INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]          
                           
 INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]                  ; position[unique=true] ; page(uid,$contentCV)[unique=true] ; contentSlot(uid,$contentCV)[unique=true]
                                  ;                         ; Side-multiStepCheckoutSummaryPage ; SideContent           ; multiStepCheckoutSummaryPage      ; SideContent-multiStepCheckoutSummaryPage
+         
                                  
 ###### Merchandise Store Finder Page ######
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 
                                  
 INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]              ; name                              ; active ; cmsComponents(&componentRef)
                           
@@ -324,7 +319,7 @@ INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]          
 INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]       ; position[unique=true] ; page(uid,$contentCV)[unique=true][default='storefinderPage'] ; contentSlot(uid,$contentCV)[unique=true]
                                  
                                  ;                         ; Middle-StoreFinderPage ; MiddleContent         ;                                                              ; MiddleContent-StoreFinderPage           
-###### Merchandise FAQ Page ######
+###### Hybris FAQ Page ######
                                  
 # CMSParagraphComponent          
 INSERT_UPDATE CMSParagraphComponent ; $contentCV[unique=true] ; uid[unique=true] ; name          ; &componentRef    ;  ;  ;  ;  
@@ -340,8 +335,9 @@ INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]  ; name  
 INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true] ; position[unique=true] ; page(uid,$contentCV)[unique=true][default='faq'] ; contentSlot(uid,$contentCV)[unique=true] ;  ;  ;  
                                  ;                         ; Section2A-FAQ    ; Section2A             ;                                                  ; Section2ASlot-FAQ                        ;  ;  ;  
                                  ;                         ; Section2B-FAQ    ; Section2B             ;                                                  ; Section2BSlot-FAQ                        ;  ;  ;  
+             
                                  
-###### Merchandise Order Expired Page ######
+###### Hybris Order Expired Page ######
                                  
 # CMSParagraphComponent          
 INSERT_UPDATE CMSParagraphComponent ; $contentCV[unique=true] ; uid[unique=true]          ; name                    ; &componentRef             ;  ;  ;  ;  
@@ -358,7 +354,7 @@ INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]   
                                  ;                         ; Section2A-OrderExpired ; Section2A             ;                                                           ; Section2ASlot-OrderExpired               ;  ;  ;  
                                  ;                         ; Section2B-OrderExpired ; Section2B             ;                                                           ; Section2BSlot-OrderExpired               ;  ;  ;  
                                  
-###### Merchandise Terms and Conditions Page
+###### Hybris Terms and Conditions Page
                                  
 # CMSParagraphComponent          
 INSERT_UPDATE CMSParagraphComponent ; $contentCV[unique=true] ; uid[unique=true]                ; name                           ; &componentRef                   ;  ;  ;  ;  
@@ -508,6 +504,8 @@ INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true] ; name   
 #### ProductGridPage      
 INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true] ; name                               ; active ; cmsComponents(&componentRef) ;  ;  ;  
                           ;                         ; ProductGridSlot  ; Product Grid Slot for Product List ; true   ; ProductGrid                  ;  ;  ;  
+
+
 #### SearchResultListPage 
 INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]      ; name                                    ; active ; cmsComponents(&componentRef) ;  ;  ;  
                           ;                         ; SearchResultsListSlot ; Search Result List Slot for Search List ; true   ; SearchResultsList            ;  ;  ;  
@@ -533,7 +531,7 @@ INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]   
                                  ;                         ; RightContentSlot-checkout-login  ; RightContentSlot      ;                                                             ; RightContentSlot-checkout-login          ;  ;  ;  
                                  
                                  
-# ImpEx for Importing CMS Content into Merchandise store
+# ImpEx for Importing CMS Content into Hybris store
 ###### Hybrids BTG Banner        
 INSERT_UPDATE SimpleBannerComponent ; $contentCV[unique=true] ; uid[unique=true] ; name           ; &componentRef ; urlLink
                                     ;                         ; HybridsBanner    ; Hybrids Banner ; HybridsBanner ;        

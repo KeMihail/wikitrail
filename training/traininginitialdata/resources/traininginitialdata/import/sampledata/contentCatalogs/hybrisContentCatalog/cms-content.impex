@@ -157,6 +157,7 @@ INSERT_UPDATE CMSProductListComponent ; $contentCV[unique=true] ; uid[unique=tru
                                       ;                         ; ProductList      ; Product List Component ; ListPickUpInStoreAction,ListAddToCartAction ; ProductList  
 INSERT_UPDATE ProductGridComponent ; $contentCV[unique=true] ; uid[unique=true] ; name                   ; actions(uid,$contentCV)                     ; &componentRef
                                    ;                         ; ProductGrid      ; Product Grid Component ; ListPickUpInStoreAction,ListAddToCartAction ; ProductGrid  
+                                   
 INSERT_UPDATE SearchResultsListComponent ; $contentCV[unique=true] ; uid[unique=true]  ; name                         ; actions(uid,$contentCV)                     ; &componentRef    
                                          ;                         ; SearchResultsList ; Search Result List Component ; ListPickUpInStoreAction,ListAddToCartAction ; SearchResultsList
 INSERT_UPDATE SearchResultsListComponent ; $contentCV[unique=true] ; uid[unique=true]  ; name                         ; actions(uid,$contentCV)                     ; &componentRef    
@@ -215,7 +216,7 @@ UPDATE ContentPage ; $contentCV[unique=true] ; uid[unique=true]   ; linkComponen
                    ;                         ; storefinderPage    ; StoreFinderLink         
                    ;                         ; login              ; LoginLink               
                    
-###### Merchandise Homepage ######
+###### Hybris Homepage ######
                    
 INSERT_UPDATE ProductCarouselComponent ; $contentCV[unique=true] ; uid[unique=true]                       ; name                             ; products(code,$productCV)                                                                      ; scroll(code) ; &componentRef                         
                                        ;                         ; HybrisHomepageProductCarouselComponent ; Hybris Homepage Product Carousel ; 0007,0001,0002,0003,0004,0005,0006,0100,0101,0102,0110,0111,0112,0200,0201,0202,0210,0211,0212 ; allVisible   ; HybrisHomepageProductCarouselComponent
@@ -239,7 +240,7 @@ INSERT_UPDATE ContentSlotForPage ; $contentCV[unique=true] ; uid[unique=true]   
                                  ;                         ; Section5-Homepage  ; Section5              ;                                                       ; Section5Slot-Homepage                   
                                  
                                  
-###### Merchandise Search Results Page ######
+###### Hybris Search Results Page ######
                                  
                                  
 INSERT_UPDATE ContentSlot ; $contentCV[unique=true] ; uid[unique=true]    ; name                     ; active ; cmsComponents(&componentRef)
